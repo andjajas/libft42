@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memmove.c                                       :+:    :+:            */
+/*   test_memset.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/03/16 21:16:54 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/17 19:48:34 by andjajas      ########   odam.nl         */
+/*   Created: 2026/03/14 11:23:39 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/16 21:21:08 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdio.h>
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+int	main(void)
 {
-	unsigned char	*pdest;
-	unsigned char	*psrc;
+	char	str[]= "Hello World";
 	
-	pdest = (unsigned char*)dest;
-	psrc = (unsigned char*)src;
-	if (dest < src)
-		ft_memcpy(dest, src, n);
-	else
-	{
-		while (n > 0)
-		{
-			n--;
-			pdest[n] = psrc[n];
-		}
-	}
-	return(dest);
+	ft_memset(str, 'c', 7);
+	printf("%s", str);
+	return (0);
 }

@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memmove.c                                       :+:    :+:            */
+/*   ft_isascii.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/03/16 21:16:54 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/17 19:48:34 by andjajas      ########   odam.nl         */
+/*   Created: 2026/03/13 16:20:51 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/13 18:55:51 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+int ft_isascii(int c)
 {
-	unsigned char	*pdest;
-	unsigned char	*psrc;
-	
-	pdest = (unsigned char*)dest;
-	psrc = (unsigned char*)src;
-	if (dest < src)
-		ft_memcpy(dest, src, n);
+    if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
 	else
 	{
-		while (n > 0)
-		{
-			n--;
-			pdest[n] = psrc[n];
-		}
+		return (0);	
 	}
-	return(dest);
 }

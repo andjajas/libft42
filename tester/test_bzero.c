@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memmove.c                                       :+:    :+:            */
+/*   test_bzero.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/03/16 21:16:54 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/17 19:48:34 by andjajas      ########   odam.nl         */
+/*   Created: 2026/03/16 19:59:30 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/16 21:21:02 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdio.h>
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+int	main(void)
 {
-	unsigned char	*pdest;
-	unsigned char	*psrc;
+	char	str[]= "Hello World";
+	int	n;
 	
-	pdest = (unsigned char*)dest;
-	psrc = (unsigned char*)src;
-	if (dest < src)
-		ft_memcpy(dest, src, n);
-	else
-	{
-		while (n > 0)
-		{
-			n--;
-			pdest[n] = psrc[n];
-		}
-	}
-	return(dest);
+	n = 7;
+	ft_bzero(str, n);
+	printf("%c %c %c %c", str[n], str[n + 1], str[n + 2], str[n + 3]);
+	return (0);
 }
