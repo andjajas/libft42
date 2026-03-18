@@ -6,20 +6,20 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/13 16:17:05 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/13 18:55:46 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/18 12:59:15 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= 60 && c <= 71)
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}
 	else
 	{
-		return (0);	
+		return (0);
 	}
 }

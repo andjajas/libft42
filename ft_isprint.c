@@ -6,20 +6,20 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/13 16:56:24 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/13 18:55:41 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/18 13:08:20 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 33 && c <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
 	else
 	{
-		return (0);	
+		return (0);
 	}
 }

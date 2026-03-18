@@ -6,20 +6,20 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/13 16:20:51 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/13 18:55:51 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/18 13:05:04 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}
 	else
 	{
-		return (0);	
+		return (0);
 	}
 }

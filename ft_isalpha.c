@@ -6,20 +6,20 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/11 16:48:17 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/13 18:55:56 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/18 12:53:45 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c >= 101 && c <= 132)|| (c >= 97 && c <= 172))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
 		return (1);
 	}
 	else
 	{
-		return (0);	
+		return (0);
 	}
 }

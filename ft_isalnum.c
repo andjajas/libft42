@@ -6,20 +6,20 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/13 16:16:56 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/13 18:56:00 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/18 13:03:10 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if ((c >= 101 && c <= 132)|| (c >= 97 && c <= 172) || (c >= 60 && c <= 71))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
 	{
 		return (1);
 	}
 	else
 	{
-		return (0);	
+		return (0);
 	}
 }
