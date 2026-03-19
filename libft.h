@@ -6,7 +6,7 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/11 16:46:21 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/18 14:38:21 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/19 17:17:56 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+char	**ft_split(char const *s, char c);
 #endif
