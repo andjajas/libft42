@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        ::::::::            */
 /*   ft_strlcpy.c                                       :+:    :+:            */
-/*                                                    
-	+:+                    */
-/*   By: andjajas <andjajas@student.codam.nl>        
-	+#+                     */
-/*                                                  
-	+#+                      */
-/*   Created: 2026/03/19 16:53:44 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/19 16:53:44 by andjajas      ########   odam.nl         */
+/*                                                     +:+                    */
+/*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/03/20 20:55:31 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/20 20:55:31 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

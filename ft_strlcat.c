@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        ::::::::            */
 /*   ft_strlcat.c                                       :+:    :+:            */
-/*                                                    
-	+:+                    */
-/*   By: andjajas <andjajas@student.codam.nl>        
-	+#+                     */
-/*                                                  
-	+#+                      */
-/*   Created: 2026/03/19 15:12:16 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/19 15:12:16 by andjajas      ########   odam.nl         */
+/*                                                     +:+                    */
+/*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/03/20 20:53:25 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/20 20:53:25 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +33,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[destlen + i] = '\0';
 	return (destlen + srclen);
 }
-	/* medium, baldr strategy
-	mayan strategy: start with initial length of dest
-	have 2 counters to go through the length of dest and src
-	return (the total dest+src+'\0');
-	*/
+/* medium, baldr strategy
+mayan strategy: start with initial length of dest
+have 2 counters to go through the length of dest and src
+return (the total dest+src+'\0');
+*/

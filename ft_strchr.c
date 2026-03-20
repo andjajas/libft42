@@ -1,35 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memmove.c                                       :+:    :+:            */
+/*   ft_strchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/03/16 21:16:54 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/20 17:27:20 by andjajas      ########   odam.nl         */
+/*   Created: 2026/03/20 14:03:48 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/20 17:21:01 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*pdest;
-	unsigned char	*psrc;
-
-	if (dest == NULL && src == NULL)
+	if (!s)
 		return (NULL);
-	pdest = (unsigned char *)dest;
-	psrc = (unsigned char *)src;
-	if (dest < src)
-		ft_memcpy(dest, src, n);
-	else
+	while (*s)
 	{
-		while (n > 0)
-		{
-			n--;
-			pdest[n] = psrc[n];
-		}
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
-	return (dest);
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }
+
+// char	*ft_strchr(const char *s, int c)
+// {
+// 	size_t	i;
+
+// 	if (!s)
+// 		return (NULL);
+// 	i = 0;
+// 	while (s[i])
+// 	{
+// 		if (s[i] == (char) c)
+// 			return ((char *)&s[i]);
+// 		i++;
+// 	}
+// 	if (s[i] == (char) c)
+// 		return ((char *)&s[i]);
+// 	return (NULL);
+// }
