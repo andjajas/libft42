@@ -6,7 +6,7 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/20 14:50:40 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/20 17:15:27 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/21 16:56:00 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*start;
 
-	if (!s)
-		return (NULL);
 	start = s;
 	while (*s)
 		s++;
