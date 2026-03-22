@@ -27,6 +27,7 @@ ft_strnstr.c \
 ft_atoi.c \
 ft_calloc.c \
 ft_strdup.c \
+ft_substr.c \
 ft_putchar_fd.c
 #ft_split.c
 OBJS	= $(SRCS:.c=.o)
