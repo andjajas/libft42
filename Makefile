@@ -1,6 +1,3 @@
-#variables, het is anders dan C, voor een deel is het Shell, soort bash
-#de makefile is een lijst van regeltjes
-
 NAME	= libft.a
 CC		= cc
 CFLAGS 	= -Wall -Werror -Wextra
@@ -28,8 +25,11 @@ ft_atoi.c \
 ft_calloc.c \
 ft_strdup.c \
 ft_substr.c \
+ft_strjoin.c \
+ft_strtrim.c \
+ft_split.c \
 ft_putchar_fd.c
-#ft_split.c
+
 OBJS	= $(SRCS:.c=.o)
 
 all: $(NAME) $(OBJS)
