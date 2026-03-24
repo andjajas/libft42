@@ -6,7 +6,7 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/11 16:46:21 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/23 21:49:27 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/24 13:41:23 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_list
+{
+	void 		*content;
+	struct 		s_list *next;
+}				t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
