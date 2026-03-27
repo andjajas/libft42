@@ -2,29 +2,31 @@
 
 char	*ft_itoa(int n)
 {
-	char	*numb;
-
-	get_len_numb(n);
-	return (numb);
+	return (0);
 }
-static int	get_len_numb (int n) // lengte bepalen
+
+
+static int	get_numlen(int n)
 {
-	int	len;
+	long	num;
+	int		count;
 
-	len = 0;
-	if (n <= 0)
-		len = 1
-	while (n > 9)
-		n /= 10;
-		len++;
-	return (len);
+	num = (long) n;
+	count = 0;
+	if (num == 0)
+		return (1);
+	if (num < 0)
+	{
+		num *= -1;
+		count++;
+	}
+	while (num > 0)
+	{
+		count++;
+		num /= 10;
+	}
+	return (count);
 }
-
-// geheugen reserveren
-
-// de string vullen
-
-
 int main(void)
 {
 	char *res; // pointer gebruiken, komt in stack
@@ -36,3 +38,31 @@ int main(void)
 	free(res); // HEAP geheugen opruimen!!!
 	return (0);
 }
+// geheugen reserveren
+// de string vullen
+
+// static int	get_numlen(int n)
+// {
+// 	long	num;
+// 	int		count;
+// 	int		sign;
+//
+// 	num = (long) n;
+// 	count = 0;
+// 	sign = 1;
+// 	if (num == 0)
+// 		return (1);
+// 	if (num < 0)
+// 	{
+// 		num *= -1;
+// 		sign *= -1;
+// 	}
+// 	while (num > 0)
+// 	{
+// 		count++;
+// 		num /= 10;
+// 	}
+// 	if (sign == -1)
+// 		count += 1;
+// 	return (count);
+// }
