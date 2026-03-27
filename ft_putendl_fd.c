@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   ft_putendl_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/03/21 20:11:36 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/27 17:31:43 by andjajas      ########   odam.nl         */
+/*   Created: 2026/03/27 19:58:02 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/27 20:02:26 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*ptr;
-
-	ptr = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!ptr)
-		return (NULL);
-	ft_strlcpy(ptr, s, (ft_strlen(s) + 1) * sizeof(char));
-	return (ptr);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
+	write(fd, "\n", 1);
 }

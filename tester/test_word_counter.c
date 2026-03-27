@@ -2,10 +2,14 @@
 #include <stdio.h>
 
 // word_counter tester
-int main(void)
+int	main(void)
 {
-	char *str = "   hello   testen hallo  whatiti world   ";
-	char spliter = ' ';
-	int results = word_counter(str, spliter);
+	char	*str;
+	char	spliter;
+	int		results;
+
+	str = "   hello   testen hallo  whatiti world   ";
+	spliter = ' ';
+	results = word_counter(str, spliter);
 	printf("%d", results);
 }

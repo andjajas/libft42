@@ -6,7 +6,7 @@
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/20 19:57:03 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/20 20:27:36 by andjajas      ########   odam.nl         */
+/*   Updated: 2026/03/27 21:15:55 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	ms = (unsigned char *)s;
 	mc = (unsigned char)c;
-	while (n > 0)
+	while (n-- > 0)
 	{
 		if (*ms == mc)
 			return (ms);
 		ms++;
-		n--;
 	}
 	return (NULL);
 }

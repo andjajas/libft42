@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   ft_putstr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: andjajas <andjajas@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/03/21 20:11:36 by andjajas      #+#    #+#                 */
-/*   Updated: 2026/03/27 17:31:43 by andjajas      ########   odam.nl         */
+/*   Created: 2026/03/27 19:49:13 by andjajas      #+#    #+#                 */
+/*   Updated: 2026/03/27 19:56:58 by andjajas      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*ptr;
-
-	ptr = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!ptr)
-		return (NULL);
-	ft_strlcpy(ptr, s, (ft_strlen(s) + 1) * sizeof(char));
-	return (ptr);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
