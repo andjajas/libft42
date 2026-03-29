@@ -6,77 +6,77 @@
 
 ## Description
 
-This is my first Codam project and the goal is to create a custom C library by re-implementing a collection of standard functions. It's aim is to help understand and master memory management, string manipulation, and data structure handling in C by building them from scratch.
+This is my first Codam project and the goal is to create a custom C library by re-implementing a collection of standard functions. Its aim is to help understand and master memory management, string manipulation, and data structure handling in C by building them from scratch.
 
 ### Detailed Library Overview
 
-The library consists of three different categories of functions:
+The library consists of three different categories of functions.
 > Part 1 - Libc functions:
 Reimplementations of a set of functions from the libc with the same prototypes and behaviors as the originals, adhering strictly to their definitions in the man page. The only difference will be their names, which must start with the ’ft_’ prefix.
 Here is a categorized list of all the libc functions of part 1:
 
-	Character Checks & Conversions
-		ft_isalpha.c – Checks for alphabetic characters.
-		ft_isdigit.c – Checks for digits (0-9).
-		ft_isalnum.c – Checks for alphanumeric characters.
-		ft_isascii.c – Checks if a character fits in the ASCII table.
-		ft_isprint.c – Checks for printable characters (including space).
-		ft_toupper.c – Converts a lowercase letter to uppercase.
-		ft_tolower.c – Converts an uppercase letter to lowercase.
-		ft_atoi.c – Converts a string to an integer.
+* Character Checks & Conversions
+[ft_isalpha.c](https://man7.org/linux/man-pages/man3/isspace.3.html) – Checks for alphabetic characters.
+[ft_isdigit.c](https://man7.org/linux/man-pages/man3/isspace.3.html) – Checks for digits (0-9).
+[ft_isalnum.c](https://man7.org/linux/man-pages/man3/isspace.3.html) – Checks for alphanumeric characters.
+[ft_isascii.c](https://man7.org/linux/man-pages/man3/isspace.3.html) – Checks if a character fits in the ASCII table.
+[ft_isprint.c](https://man7.org/linux/man-pages/man3/isspace.3.html) – Checks for printable characters (including space).
+[ft_toupper.c](https://man7.org/linux/man-pages/man3/toupper.3.html) – Converts a lowercase letter to uppercase.
+[ft_tolower.c](https://man7.org/linux/man-pages/man3/toupper.3.html) – Converts an uppercase letter to lowercase.
+[ft_atoi.c](https://man7.org/linux/man-pages/man3/atoi.3.html) – Converts a string to an integer.
 
-	String Manipulation
-		ft_strlen.c – Calculates the length of a string.
-		ft_strlcpy.c – Size-bounded string copying.
-		ft_strlcat.c – Size-bounded string concatenation.
-		ft_strchr.c – Locates the first occurrence of a character in a string.
-		ft_strrchr.c – Locates the last occurrence of a character in a string.
-		ft_strncmp.c – Compares two strings up to n characters.
-		ft_strnstr.c – Locates a substring within a string.
-		ft_strdup.c – Creates a duplicate of a string (using malloc).
+* String Manipulation
+[ft_strlen.c](https://man7.org/linux/man-pages/man3/strlen.3.html) – Calculates the length of a string.
+[ft_strlcpy.c](https://linux.die.net/man/3/strlcpy) – Size-bounded string copying.
+[ft_strlcat.c](https://linux.die.net/man/3/strlcpy) – Size-bounded string concatenation.
+[ft_strchr.c](https://man7.org/linux/man-pages/man3/strchr.3.html) – Locates the first occurrence of a character in a string.
+[ft_strrchr.c](https://man7.org/linux/man-pages/man3/strchr.3.html) – Locates the last occurrence of a character in a string.
+[ft_strncmp.c](https://man7.org/linux/man-pages/man3/strncmp.3.html) – Compares two strings up to n characters.
+[ft_strnstr.c](https://man.freebsd.org/cgi/man.cgi?query=strnstr&sektion=3) – Locates a substring within a string.
+[ft_strdup.c](https://man7.org/linux/man-pages/man3/strdup.3.html) – Creates a duplicate of a string (using malloc).
 
-	Memory Management
-		ft_memset.c – Fills memory with a constant byte.
-		ft_bzero.c – Sets a byte string to zero.
-		ft_memcpy.c – Copies a memory area (non-overlapping).
-		ft_memmove.c – Copies a memory area (safe for overlapping regions).
-		ft_memchr.c – Scans memory for a specific character.
-		ft_memcmp.c – Compares two memory areas.
-		ft_calloc.c – Allocates memory and initializes it to zero.
+* Memory Management
+[ft_memset.c](https://man7.org/linux/man-pages/man3/memset.3.html) – Fills memory with a constant byte.
+[ft_bzero.c](https://man7.org/linux/man-pages/man3/bzero.3.html) – Sets a byte string to zero.
+[ft_memcpy.c](https://man7.org/linux/man-pages/man3/memcpy.3.html) – Copies a memory area (non-overlapping).
+[ft_memmove.c](https://man7.org/linux/man-pages/man3/memmove.3.html) – Copies a memory area (safe for overlapping regions).
+[ft_memchr.c](https://man7.org/linux/man-pages/man3/memchr.3.html) – Scans memory for a specific character.
+[ft_memcmp.c](https://man7.org/linux/man-pages/man3/memcmp.3.html) – Compares two memory areas.
+[ft_calloc.c](https://linux.die.net/man/3/calloc) – Allocates memory and initializes it to zero.
 
 > Part 2 - Additional functions:
 A set of functions with custom utilities that are not included in the libc or exist in a different form. Here is a categorized list of all the functions of part 2:
 
-	String Manipulation
-		ft_substr.c – Extracts a substring from a string at a specific index.
-		ft_strjoin.c – Concatenates two strings into a new, heap-allocated string.
-		ft_strtrim.c – Trims specific characters from the beginning and end of a string.
-		ft_split.c – Splits a string into an array of strings using a delimiter.
-		ft_strmapi.c – Applies a function to each character of a string to create a new string.
-		ft_striteri.c – Applies a function to each character of a string (modifies in-place).
+* String Manipulation
+ft_substr.c – Extracts a substring from a string at a specific index.
+ft_strjoin.c – Concatenates two strings into a new, heap-allocated string.
+ft_strtrim.c – Trims specific characters from the beginning and end of a string.
+ft_split.c – Splits a string into an array of strings using a delimiter.
+ft_strmapi.c – Applies a function to each character of a string to create a new string.
+ft_striteri.c – Applies a function to each character of a string (modifies in-place).
 
-	Data Conversion
-		ft_itoa.c – Converts an integer into a null-terminated string (the reverse of atoi).
+* Data Conversion
+ft_itoa.c – Converts an integer into a null-terminated string (the reverse of atoi).
 
-	File Descriptor Output (Write)
-		ft_putchar_fd.c – Outputs a single character to a given file descriptor.
-		ft_putstr_fd.c – Outputs a string to a given file descriptor.
-		ft_putendl_fd.c – Outputs a string followed by a newline to a given file descriptor.
-		ft_putnbr_fd.c – Outputs an integer to a given file descriptor.
+* File Descriptor Output (Write)
+ft_putchar_fd.c – Outputs a single character to a given file descriptor.
+ft_putstr_fd.c – Outputs a string to a given file descriptor.
+ft_putendl_fd.c – Outputs a string followed by a newline to a given file descriptor.
+ft_putnbr_fd.c – Outputs an integer to a given file descriptor.
 
 > Part 3 - Linked List functions:
 A set of tools to manage dynamic data structures using a custom t_list struct. Here is a categorized list of the functions of part 3:
 
-	Linked List Management
-		ft_lstnew.c – Creates a new list element with the provided content.
-		ft_lstadd_front.c – Adds a new element to the beginning of the list.
-		ft_lstsize.c – Counts the number of elements in a list.
-		ft_lstlast.c – Returns the last element of the list.
-		ft_lstadd_back.c – Adds a new element to the end of the list.
-		ft_lstdelone.c – Deletes a specific element and frees its content using a given function.
-		ft_lstclear.c – Deletes and frees an entire list and all its contents.
-		ft_lstiter.c – Iterates through the list and applies a function to the content of each element.
-		ft_lstmap.c – Creates a new list by applying a function to each element of the original list.
+* Linked List Management
+ft_lstnew.c – Creates a new list element with the provided content.
+ft_lstadd_front.c – Adds a new element to the beginning of the list.
+ft_lstsize.c – Counts the number of elements in a list.
+ft_lstlast.c – Returns the last element of the list.
+ft_lstadd_back.c – Adds a new element to the end of the list.
+ft_lstdelone.c – Deletes a specific element and frees its content using a given function.
+ft_lstclear.c – Deletes and frees an entire list and all its contents.
+ft_lstiter.c – Iterates through the list and applies a function to the content of each element.
+ft_lstmap.c – Creates a new list by applying a function to each element of the original list.
 
 
 
@@ -130,5 +130,21 @@ To integrate this library into your own C projects:
 
 ## Resources
 
-- **Manuals:** [Standard C Library Functions (Man 3)](https://man7.org)
-- **Tutorials:** [C tutorial for beginners by Bro Code (YouTube)](https://www.youtube.com/playlist?list=PLZPZq0r_RZOOzY_vR4zJM32SqsSInGMwe)
+* **Manuals:**
+[Standard C Library Functions (Man 3)](https://man7.org)
+[Linux Documentation](https://linux.die.net)
+[FreeBSD Manual Pages](https://man.freebsd.org/cgi/man.cgi)
+* **Search engines/Databases**
+[Google](https://www.google.nl/index.html)
+[Stackoverflow](https://stackoverflow.com/questions)
+* **Tutorials:**
+[w3schools](https://www.w3schools.com/c/index.php)
+[geeksforgeeks](https://www.geeksforgeeks.org/c/c-programming-language/)
+[Makefile tutorial](https://makefiletutorial.com/)
+[C tutorial for beginners by Bro Code (YouTube)](https://www.youtube.com/playlist?list=PLZPZq0r_RZOOzY_vR4zJM32SqsSInGMwe)
+[C Programming for beginners by Programiz (YouTube)](https://www.youtube.com/playlist?list=PL98qAXLA6aftD9ZlnjpLhdQAOFI8xIB6e)
+[CS50x 2026 Lectures vid 1 (YouTube)](https://www.youtube.com/playlist?list=PLhQjrBD2T380hlTqAU8HfvVepCcjCqTg6)
+[Data Structures vid 1-5 by mycodeschool (YouTube)](https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P)
+
+AI was used as an instructor to explain new or difficult concepts and grasp the logic.
+AI was prompted to act as an instructor and not write the code directly.
