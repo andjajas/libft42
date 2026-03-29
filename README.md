@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <andjajas>.*
+*This project has been created as part of the 42 curriculum by andjajas.*
 
 # LIBFT
 
@@ -20,7 +20,7 @@ Here is a categorized list of all the libc functions of part 1:
 		ft_isdigit.c – Checks for digits (0-9).
 		ft_isalnum.c – Checks for alphanumeric characters.
 		ft_isascii.c – Checks if a character fits in the ASCII table.
-		**ft_isprint.c – Checks for printable characters (including space).
+		ft_isprint.c – Checks for printable characters (including space).
 		ft_toupper.c – Converts a lowercase letter to uppercase.
 		ft_tolower.c – Converts an uppercase letter to lowercase.
 		ft_atoi.c – Converts a string to an integer.
@@ -130,3 +130,5 @@ To integrate this library into your own C projects:
 
 ## Resources
 
+- **Manuals:** [Standard C Library Functions (Man 3)](https://man7.org)
+- **Tutorials:** [C tutorial for beginners by Bro Code (YouTube)](https://www.youtube.com/playlist?list=PLZPZq0r_RZOOzY_vR4zJM32SqsSInGMwe)
