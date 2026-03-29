@@ -63,5 +63,4 @@ re: fclean all
 
 .PHONY: all clean fclean re
 
-#mrun: re
-#	make clean; cc main.c $(NAME) $(CFLAGS); ./a.out
+bonus: all
