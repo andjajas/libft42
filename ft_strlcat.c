@@ -33,8 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[destlen + i] = '\0';
 	return (destlen + srclen);
 }
-/* medium, baldr strategy
-mayan strategy: start with initial length of dest
-have 2 counters to go through the length of dest and src
-return (the total dest+src+'\0');
-*/
