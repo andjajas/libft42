@@ -12,8 +12,7 @@ This is my first Codam project and the goal is to create a custom C library by r
 
 The library consists of three different categories of functions.
 > Part 1 - Libc functions:
-Reimplementations of a set of functions from the libc with the same prototypes and behaviors as the originals, adhering strictly to their definitions in the man page. The only difference will be their names, which must start with the ’ft_’ prefix.
-Here is a categorized list of all the libc functions of part 1:
+Reimplementations of a set of functions from the libc with the same prototypes and behaviors as the originals, adhering strictly to their definitions in the man page. The only difference will be their names, which must start with the ’ft_’ prefix. Here is a categorized list of all the libc functions of part 1:
 
 * Character Checks & Conversions
 [ft_isalpha.c](https://man7.org/linux/man-pages/man3/isspace.3.html) – Checks for alphabetic characters.
@@ -25,24 +24,32 @@ Here is a categorized list of all the libc functions of part 1:
 [ft_tolower.c](https://man7.org/linux/man-pages/man3/toupper.3.html) – Converts an uppercase letter to lowercase.
 [ft_atoi.c](https://man7.org/linux/man-pages/man3/atoi.3.html) – Converts a string to an integer.
 
+ For the character classification functions (ft_isalpha, ft_isdigit, ft_isalnum, ft_isascii, ft_isprint),
+ the return value must be:
+ • 1 if the character matches the tested class
+ • 0 if the character does not match
+
 * String Manipulation
 [ft_strlen.c](https://man7.org/linux/man-pages/man3/strlen.3.html) – Calculates the length of a string.
 [ft_strlcpy.c](https://linux.die.net/man/3/strlcpy) – Size-bounded string copying.
-[ft_strlcat.c](https://linux.die.net/man/3/strlcpy) – Size-bounded string concatenation.
+[ft_strlcat.c](https://linux.die.net/man/3/strlcat) – Size-bounded string concatenation.
 [ft_strchr.c](https://man7.org/linux/man-pages/man3/strchr.3.html) – Locates the first occurrence of a character in a string.
 [ft_strrchr.c](https://man7.org/linux/man-pages/man3/strchr.3.html) – Locates the last occurrence of a character in a string.
-[ft_strncmp.c](https://man7.org/linux/man-pages/man3/strncmp.3.html) – Compares two strings up to n characters.
+[ft_strncmp.c](https://man7.org/linux/man-pages/man3/strncmp.3p.html) – Compares two strings up to n characters.
 [ft_strnstr.c](https://man.freebsd.org/cgi/man.cgi?query=strnstr&sektion=3) – Locates a substring within a string.
 [ft_strdup.c](https://man7.org/linux/man-pages/man3/strdup.3.html) – Creates a duplicate of a string (using malloc).
 
 * Memory Management
-[ft_memset.c](https://man7.org/linux/man-pages/man3/memset.3.html) – Fills memory with a constant byte.
-[ft_bzero.c](https://man7.org/linux/man-pages/man3/bzero.3.html) – Sets a byte string to zero.
-[ft_memcpy.c](https://man7.org/linux/man-pages/man3/memcpy.3.html) – Copies a memory area (non-overlapping).
-[ft_memmove.c](https://man7.org/linux/man-pages/man3/memmove.3.html) – Copies a memory area (safe for overlapping regions).
-[ft_memchr.c](https://man7.org/linux/man-pages/man3/memchr.3.html) – Scans memory for a specific character.
-[ft_memcmp.c](https://man7.org/linux/man-pages/man3/memcmp.3.html) – Compares two memory areas.
+[ft_memset.c](https://linux.die.net/man/3/memset) – Fills memory with a constant byte.
+[ft_bzero.c](https://linux.die.net/man/3/bzero) – Sets a byte string to zero.
+[ft_memcpy.c](https://linux.die.net/man/3/memcpy) – Copies a memory area (non-overlapping).
+[ft_memmove.c](https://linux.die.net/man/3/memmove) – Copies a memory area (safe for overlapping regions).
+[ft_memchr.c](https://linux.die.net/man/3/memchr) – Scans memory for a specific character.
+[ft_memcmp.c](https://linux.die.net/man/3/memcmp) – Compares two memory areas.
 [ft_calloc.c](https://linux.die.net/man/3/calloc) – Allocates memory and initializes it to zero.
+
+ The ’calloc’ function’s behavior may differ from its man page description.
+ This rule applies: If nmemb or size is 0, then calloc() returns a unique pointer value that can be successfully passed to free().
 
 > Part 2 - Additional functions:
 A set of functions with custom utilities that are not included in the libc or exist in a different form. Here is a categorized list of all the functions of part 2:
@@ -145,6 +152,7 @@ To integrate this library into your own C projects:
 [C Programming for beginners by Programiz (YouTube)](https://www.youtube.com/playlist?list=PL98qAXLA6aftD9ZlnjpLhdQAOFI8xIB6e)
 [CS50x 2026 Lectures vid 1 (YouTube)](https://www.youtube.com/playlist?list=PLhQjrBD2T380hlTqAU8HfvVepCcjCqTg6)
 [Data Structures vid 1-5 by mycodeschool (YouTube)](https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P)
+[Medium.com tutorial memmove](https://marmota.medium.com/c-language-making-memmove-def8792bb8d5)
 
 AI was used as an instructor to explain new or difficult concepts and grasp the logic.
-AI was prompted to act as an instructor and not write the code directly.
+AI was prompted to act as an instructor and only give hints or how to approach or breakdown the problem, never to write the code directly.

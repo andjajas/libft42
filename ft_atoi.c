@@ -14,23 +14,23 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	result;
+	int	num;
 	int	sign;
 
-	result = 0;
+	num = 0;
 	sign = 1;
-	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
 	{
 		if (*nptr == '-')
-			sign *= -1;
+			sign = -1;
 		nptr++;
 	}
-	while (ft_isdigit(*nptr))
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		result = result * 10 + (*nptr - '0');
+		num = num * 10 + (*nptr - '0');
 		nptr++;
 	}
-	return (result * sign);
+	return (num * sign);
 }

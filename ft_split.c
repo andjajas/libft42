@@ -13,19 +13,20 @@
 #include "libft.h"
 
 static size_t	wordcount(char const *s, char c);
-static char		**fill_split(char **res, char const *s, char c);
-static char		**clear_all(char **res, char **current);
+static char		**fill_split(char **arr_word, char const *s, char c);
+static char		**clear_all(char **arr_word, char **fill);
 
 char	**ft_split(char const *s, char c)
 {
-	char	**res;
+	char	**arr_word;
 
 	if (!s)
 		return (NULL);
-	res = malloc((wordcount(s, c) + 1) * sizeof(char *));
-	if (!res)
+	arr_word = malloc((wordcount(s, c) + 1) * sizeof(char *));
+	if (!arr_word)
 		return (NULL);
-	return (fill_split(res, s, c));
+	arr_word = fill_split(arr_word, s, c);
+	return (arr_word);
 }
 
 static size_t	wordcount(char const *s, char c)
@@ -35,7 +36,7 @@ static size_t	wordcount(char const *s, char c)
 	count = 0;
 	while (*s)
 	{
-		while (*s == c && *s)
+		while (*s && *s == c)
 			s++;
 		if (*s)
 		{
@@ -47,12 +48,12 @@ static size_t	wordcount(char const *s, char c)
 	return (count);
 }
 
-static char	**fill_split(char **res, char const *s, char c)
+static char	**fill_split(char **arr_word, char const *s, char c)
 {
-	char		**temp;
+	char		**fill;
 	char const	*start;
 
-	temp = res;
+	fill = arr_word;
 	while (*s)
 	{
 		while (*s == c && *s)
@@ -62,20 +63,23 @@ static char	**fill_split(char **res, char const *s, char c)
 			start = s;
 			while (*s && *s != c)
 				s++;
-			*temp = ft_substr(start, 0, s - start);
-			if (!*temp)
-				return (clear_all(res, temp));
-			temp++;
+			*fill = ft_substr(start, 0, s - start);
+			if (!*fill)
+				return (clear_all(arr_word, fill));
+			fill++;
 		}
 	}
-	*temp = NULL;
-	return (res);
+	*fill = NULL;
+	return (arr_word);
 }
 
-static char	**clear_all(char **res, char **current)
+static char	**clear_all(char **arr_word, char **fill)
 {
-	while (current > res)
-		free(*--current);
-	free(res);
+	while (fill > arr_word)
+	{
+		fill--;
+		free(*fill);
+	}
+	free(arr_word);
 	return (NULL);
 }
