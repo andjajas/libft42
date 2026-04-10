@@ -56,7 +56,7 @@ static char	**fill_split(char **arr_word, char const *s, char c)
 	fill = arr_word;
 	while (*s)
 	{
-		while (*s == c && *s)
+		while (*s && *s == c)
 			s++;
 		if (*s)
 		{
